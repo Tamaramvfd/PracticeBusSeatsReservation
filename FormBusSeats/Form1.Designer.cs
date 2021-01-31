@@ -29,33 +29,47 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.userControlBus1 = new CustomBusReservation.UserControlBus();
             this.SuspendLayout();
             // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(407, 588);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(235, 22);
+            this.textBox2.TabIndex = 2;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
             // userControlBus1
             // 
+            this.userControlBus1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.userControlBus1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("userControlBus1.BackgroundImage")));
             this.userControlBus1.Capacity = 8;
             this.userControlBus1.FreeSeats = 8;
-            this.userControlBus1.Location = new System.Drawing.Point(12, 36);
+            this.userControlBus1.Location = new System.Drawing.Point(46, 24);
             this.userControlBus1.Name = "userControlBus1";
             this.userControlBus1.Size = new System.Drawing.Size(1068, 538);
-            this.userControlBus1.TabIndex = 0;
+            this.userControlBus1.TabIndex = 3;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1106, 586);
+            this.ClientSize = new System.Drawing.Size(1170, 641);
             this.Controls.Add(this.userControlBus1);
+            this.Controls.Add(this.textBox2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
+        private System.Windows.Forms.TextBox textBox2;
         private CustomBusReservation.UserControlBus userControlBus1;
     }
 }
