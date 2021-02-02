@@ -47,15 +47,16 @@ namespace CustomBusReservation
         {
             SeatsTakenEvent?.Invoke(this, e);
         }
-
-        protected virtual void OnSeatsClear(EventArgs e)
-        {
-            SeatsClearEvent?.Invoke(this, e);
-        }
+        
         private void buttonClear_Click(object sender, EventArgs e)
         {
             limpiarBotones();
             valFreeSeats = valCapacity;
+            OnSeatsClear(EventArgs.Empty);
+        }
+        protected virtual void OnSeatsClear(EventArgs e)
+        {
+            SeatsClearEvent?.Invoke(this, e);
         }
 
         public void limpiarBotones()

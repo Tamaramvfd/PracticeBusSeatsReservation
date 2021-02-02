@@ -10,16 +10,32 @@ using System.Windows.Forms;
 
 namespace FormBusSeats
 {
+    
     public partial class Form1 : Form
     {
+        private int sillasLibres = 8;
+        private Boolean control = false;
+        int seatsFree;
         public Form1()
         {
             InitializeComponent();
+            textBox2.Text = sillasLibres.ToString();
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
+        private void userControlBus1_SeatsTakenEvent(object sender, EventArgs e)
         {
-            
+           
+                
+                sillasLibres--;
+            textBox2.Text = sillasLibres.ToString();
+            control = false;
+        }
+
+        private void userControlBus1_SeatsClearEvent(object sender, EventArgs e)
+        {
+            control = true;
+            sillasLibres = 8;
+            textBox2.Text = sillasLibres.ToString();
         }
     }
 }

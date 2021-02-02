@@ -39,20 +39,18 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(235, 22);
             this.textBox2.TabIndex = 2;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // userControlBus1
             // 
-            this.userControlBus1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.userControlBus1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("userControlBus1.BackgroundImage")));
             this.userControlBus1.Capacity = 8;
             this.userControlBus1.FreeSeats = 8;
-            this.userControlBus1.Location = new System.Drawing.Point(46, 24);
+            this.userControlBus1.Location = new System.Drawing.Point(24, 23);
             this.userControlBus1.Name = "userControlBus1";
             this.userControlBus1.Size = new System.Drawing.Size(1068, 538);
             this.userControlBus1.TabIndex = 3;
+            this.userControlBus1.SeatsTakenEvent += new System.EventHandler(this.userControlBus1_SeatsTakenEvent);
+            this.userControlBus1.SeatsClearEvent += new System.EventHandler(this.userControlBus1_SeatsClearEvent);
             // 
             // Form1
             // 
